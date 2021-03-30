@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Android_NewLetsEduvate" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <!--<item name="colorPrimary">@color/navigation_drawer_background</item>-->
+        <item name="colorPrimary">#FF6B6B</item>
+        <item name="colorPrimaryVariant">#454545</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FF6B6B</item>
+        <item name="colorSecondaryVariant">#454545</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="toolbarStyle">@style/MyToolBarStyle</item>
+        <item name="drawerArrowStyle">@style/DrawerIconStyle</item>
+        <item name="android:windowBackground">#FFE8E8</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/MyTitleTextAppearance</item>
+        <item name="subtitleTextAppearance">@style/MySubTitleTextAppearance</item>
+
+    </style>
+    <style name="MyTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="MySubTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">#1976d2</item>
+    </style>
+
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#fff</item>
+    </style>
+
+    <style name="Theme.Android_NewLetsEduvate.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Android_NewLetsEduvate.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Android_NewLetsEduvate.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

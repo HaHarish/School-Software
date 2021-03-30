@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.newletseduvate.model.diary.DailyDiaryModel" />
+
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        style="@style/Common.CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/transaction_id"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction Id : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_transaction_id"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/transaction_id"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/receipt_no"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receipt No : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_transaction_id" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_receipt_no"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/transaction_id"
+                app:layout_constraintTop_toTopOf="@+id/receipt_no" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date_of_payment"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Of Payment : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_receipt_no" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_date_of_payment"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/date_of_payment"
+                app:layout_constraintTop_toTopOf="@+id/date_of_payment" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payment_mode"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Mode : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date_of_payment" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_payment_mode"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/payment_mode"
+                app:layout_constraintTop_toTopOf="@+id/payment_mode" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fee_type"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee Type : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_payment_mode" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_fee_type"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fee_type"
+                app:layout_constraintTop_toTopOf="@+id/fee_type" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/amount_paid"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fee_type" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_amount_paid"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/amount_paid"
+                app:layout_constraintTop_toTopOf="@+id/amount_paid" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/total"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total : "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_amount_paid" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/total"
+                app:layout_constraintTop_toTopOf="@+id/total" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

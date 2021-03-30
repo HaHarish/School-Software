@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home_fragment">
+
+    <activity
+        android:id="@+id/nav_main_activity"
+        android:name="com.newletseduvate.ui.activities.MainActivity"
+        tools:layout="@layout/activity_main" />
+
+    <activity
+        android:id="@+id/nav_login_activity"
+        android:name="com.newletseduvate.ui.login.LoginActivity"
+        tools:layout="@layout/activity_login" />
+
+    <fragment
+        android:id="@+id/nav_home_fragment"
+        android:name="com.newletseduvate.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/nav_student_diary"
+        android:name="com.newletseduvate.ui.diary.student.DiaryStudentViewPager"
+        android:label="@string/menu_student_diary"
+        tools:layout="@layout/fragment_student_diary_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_attend_online_class"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassAttendFragment"
+        android:label="@string/menu_attend_online_class"
+        tools:layout="@layout/fragment_online_class_attend" />
+
+    <fragment
+        android:id="@+id/nav_view_online_class"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassViewClassFragment"
+        android:label="@string/menu_view_online_class"
+        tools:layout="@layout/fragment_online_class_view_class" />
+
+    <fragment
+        android:id="@+id/nav_teacher_view_online_class"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherViewClassFragment"
+        android:label="@string/menu_view_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_view_class" />
+
+    <fragment
+        android:id="@+id/nav_teacher_resources_online_class"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherResourcesFragment"
+        android:label="@string/menu_view_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_resources" />
+
+    <fragment
+        android:id="@+id/nav_online_class_create"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassCreateClassFragment"
+        android:label="Create class"
+        tools:layout="@layout/fragment_online_class_create_class" />
+
+    <fragment
+        android:id="@+id/nav_student_blog"
+        android:name="com.newletseduvate.ui.blogs.BlogStudentViewPager"
+        android:label="@string/menu_student_blog"
+        tools:layout="@layout/fragment_blog_student_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_student_blog_published"
+        android:name="com.newletseduvate.ui.blogs.BlogPublishedViewPager"
+        android:label="@string/menu_student_blog"
+        tools:layout="@layout/fragment_blog_published_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_student_homework_filter"
+        android:name="com.newletseduvate.ui.homework.HomeworkStudentFilterFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_student_homework_filter" />
+
+    <fragment
+        android:id="@+id/nav_student_homework"
+        android:name="com.newletseduvate.ui.homework.HomeworkStudentFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_blog_published_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher" />
+
+    <fragment
+        android:id="@+id/nav_student_homework_details"
+        android:name="com.newletseduvate.ui.homework.HomeworkStudentDetailsSubmittedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_student_details_submitted" />
+
+    <fragment
+        android:id="@+id/nav_student_homework_details_opened"
+        android:name="com.newletseduvate.ui.homework.HomeworkStudentDetailsOpenedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_student_details_opened" />
+
+    <fragment
+        android:id="@+id/nav_student_homework_details_evaluated"
+        android:name="com.newletseduvate.ui.homework.HomeworkStudentDetailsEvaluatedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_student_details_evaluated" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_details_submitted"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherDetailsAssignedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_details_assigned" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_details_hw_evaluated"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherDetailsHWEvaluatedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_details_h_w_evaluated" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_details_hw_submitted"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherDetailsHWSubmittedFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_details_h_w_submitted" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_add_homework"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherAddHomeworkFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_add_homework" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_evaluate"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherEvaluateFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_evaluate" />
+
+    <fragment
+        android:id="@+id/nav_teacher_homework_submit"
+        android:name="com.newletseduvate.ui.homework.HomeworkTeacherSubmitFragment"
+        android:label="@string/menu_student_homework"
+        tools:layout="@layout/fragment_homework_teacher_submit" />
+
+    <fragment
+        android:id="@+id/nav_attend_online_class_details"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassAttendDetailsFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_attend_details" />
+
+    <fragment
+        android:id="@+id/nav_online_class_teacher_view_class_details"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherViewClassDetailsFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_view_class_details" />
+
+    <fragment
+        android:id="@+id/nav_online_class_teacher_resources_details"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherResourcesDetailsFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_resources_details" />
+
+    <fragment
+        android:id="@+id/nav_online_class_teacher_resources_upload"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherResourcesUploadFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_resources_upload" />
+
+    <fragment
+        android:id="@+id/nav_attend_online_class_resource"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassAttendResourceFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_attend_resource" />
+
+    <fragment
+        android:id="@+id/nav_attend_online_class_attendance_list"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassTeacherAttendanceListFragment"
+        android:label="@string/attend_online_class"
+        tools:layout="@layout/fragment_online_class_teacher_attendance_list" />
+
+    <fragment
+        android:id="@+id/nav_student_blog_create_new"
+        android:name="com.newletseduvate.ui.blogs.BlogStudentCreateNewFragment"
+        android:label="@string/menu_student_blog"
+        tools:layout="@layout/fragment_blog_student_create_new" />
+
+    <fragment
+        android:id="@+id/nav_student_blog_details"
+        android:name="com.newletseduvate.ui.blogs.BlogStudentDetailsFragment"
+        android:label="@string/menu_student_blog"
+        tools:layout="@layout/fragment_blog_student_details" />
+
+    <fragment
+        android:id="@+id/nav_published_blog_details"
+        android:name="com.newletseduvate.ui.blogs.BlogPublishedStudentDetailsFragment"
+        android:label="@string/menu_student_blog"
+        tools:layout="@layout/fragment_blog_published_details" />
+
+    <fragment
+        android:id="@+id/nav_lesson_plan"
+        android:name="com.newletseduvate.ui.lesson_plan.student.LessonPlanFragment"
+        android:label="@string/lesson_plan"
+        tools:layout="@layout/fragment_lesson_plan" />
+
+    <fragment
+        android:id="@+id/nav_circular"
+        android:name="com.newletseduvate.ui.circular.student.CircularFragment"
+        android:label="@string/circular"
+        tools:layout="@layout/fragment_circular" />
+
+    <fragment
+        android:id="@+id/nav_circular_details"
+        android:name="com.newletseduvate.ui.circular.student.CircularDetailsFragment"
+        android:label="@string/circular_details"
+        tools:layout="@layout/fragment_circular_details" />
+
+    <fragment
+        android:id="@+id/nav_view_course_plan"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassViewCoursePlanFragment"
+        android:label="@string/view_course_plan"
+        tools:layout="@layout/adapter_view_course_plan" />
+
+    <fragment
+        android:id="@+id/nav_new_oes_tool"
+        android:name="com.newletseduvate.utils.oes_tool.NewOesToolFragment"
+        android:label="Oes tool"
+        tools:layout="@layout/fragment_new_oes_tool_modified" />
+
+    <fragment
+        android:id="@+id/nav_finance_fee_structure"
+        android:name="com.newletseduvate.ui.finance.FeeStructureViewPager"
+        android:label="Finance"
+        tools:layout="@layout/fragment_finance_fees_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_finance_manage_payment"
+        android:name="com.newletseduvate.ui.finance.ManagePaymentFragmentViewPager"
+        android:label="Finance"
+        tools:layout="@layout/fragment_manage_payment_viewpager" />
+
+    <fragment
+        android:id="@+id/nav_circular_teacher_main"
+        android:name="com.newletseduvate.ui.circular.teacher.TeacherCircularFragment"
+        android:label="Circular"
+        tools:layout="@layout/fragment_circular_teacher" />
+
+    <fragment
+        android:id="@+id/nav_circular_teacher_filter"
+        android:name="com.newletseduvate.ui.circular.teacher.TeacherCircularFilterFragment"
+        android:label="Circular Filter"
+        tools:layout="@layout/fragment_teacher_circular_filter" />
+
+    <fragment
+        android:id="@+id/nav_circular_teacher_view_more"
+        android:name="com.newletseduvate.ui.circular.teacher.TeacherCircularViewMoreFragment"
+        android:label="Circular Details"
+        tools:layout="@layout/fragment_teacher_circular_viewmore" />
+
+    <fragment
+        android:id="@+id/nav_teacher_lesson_plan_home"
+        android:name="com.newletseduvate.ui.lesson_plan.teacher.TeacherLessonPlanHomeFragment"
+        android:label="Lesson Plan"
+        tools:layout="@layout/fragment_teacher_lesson_plan_home" />
+
+    <fragment
+        android:id="@+id/nav_teacher_lesson_plan_filter"
+        android:name="com.newletseduvate.ui.lesson_plan.teacher.TeacherLessonPlanFilterFragment"
+        android:label="Lesson Plan Filter"
+        tools:layout="@layout/fragment_teacher_lesson_plan_filter" />
+
+    <fragment
+        android:id="@+id/nav_teacher_lesson_plan_view_more"
+        android:name="com.newletseduvate.ui.lesson_plan.teacher.TeacherLessonPlanViewMoreFragment"
+        android:label="Lesson Plan"
+        tools:layout="@layout/fragment_teacher_lesson_plan_view_more" />
+
+    <fragment
+        android:id="@+id/nav_teacher_diary_home"
+        android:name="com.newletseduvate.ui.diary.teacher.TeacherDiaryHomeFragment"
+        android:label="Teacher Diary"
+        tools:layout="@layout/fragment_teacher_diary_home" />
+
+    <fragment
+        android:id="@+id/nav_teacher_diary_create_filter"
+        android:name="com.newletseduvate.ui.diary.teacher.TeacherDiaryCreateDiaryAndFilterFragment"
+        android:label="Teacher Diary"
+        tools:layout="@layout/fragment_teacher_diary_create_filter" />
+
+    <fragment
+        android:id="@+id/nav_create_class_student_filter"
+        android:name="com.newletseduvate.ui.online_class.OnlineClassCreateClassSelectStudentFragment"
+        android:label="Circular Details"
+        tools:layout="@layout/fragment_crate_class_selected_student" />
+
+    <fragment
+        android:id="@+id/nav_teacher_diary_active_students"
+        android:name="com.newletseduvate.ui.diary.teacher.TeacherDiaryActiveStudentsFragment"
+        android:label="Active Students"
+        tools:layout="@layout/fragment_teacher_diary_active_students" />
+
+    <fragment
+        android:id="@+id/nav_teacher_diary_create_general"
+        android:name="com.newletseduvate.ui.diary.teacher.TeacherDiaryCreateFragment"
+        android:label="Create General Diary"
+        tools:layout="@layout/fragment_teacher_diary_general" />
+
+</navigation>

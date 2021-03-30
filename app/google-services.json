@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1058064102327",
+    "project_id": "letseduvate-97b0e",
+    "storage_bucket": "letseduvate-97b0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058064102327:android:640e7ec2294430b8556e32",
+        "android_client_info": {
+          "package_name": "com.newletseduvate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058064102327-lqtra6675d3cl75b5aajho4342nmuqs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBDKX5X_AvrW7E2jQpmidxbJLxqplx-W0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058064102327-lqtra6675d3cl75b5aajho4342nmuqs3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1058064102327-p26c8980ueecp5cqmbr7femen2mguc1a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.k12.letseduvate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">LetsEduvate</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="login">Login</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_erp_code">Enter ERP Code</string>
+    <string name="connect_internet">Please connect to the Internet and Try again</string>
+    <string name="doesnot_exist">The User does not exist</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_student_diary">Student Diary</string>
+    <string name="daily_diary">Daily Diary</string>
+    <string name="general_diary">General Diary</string>
+    <string name="check_internet">Check internet connection</string>
+    <string name="retry">Retry</string>
+
+    <string name="menu_attend_online_class">Attend Online Class</string>
+    <string name="menu_view_online_class">View Class</string>
+    <string name="menu_student_blog">Student Blogs</string>
+
+    <string name="pending_review">Pending Review</string>
+    <string name="reviewed">Reviewed</string>
+    <string name="drafted">Drafted</string>
+    <string name="deleted">Deleted</string>
+    <string name="done">Done</string>
+    <string name="filter">Filter</string>
+    <string name="select_date_range">Select date range</string>
+    <string name="reset">Reset</string>
+
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="from_date">From date</string>
+    <string name="to_date">To date</string>
+
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="branch">Branch</string>
+    <string name="grade">Grade</string>
+    <string name="course">Course</string>
+    <string name="batch_limit">Batch limit</string>
+    <string name="get_all_classes">Get all classes</string>
+
+    <string name="dairy">Dairy</string>
+    <string name="attend_online_class">Attend Online Class</string>
+    <string name="lesson_plan">Lesson Plan</string>
+    <string name="circular">Circular</string>
+    <string name="circular_details">Circular Details</string>
+    <string name="circular_filter">Circular</string>
+
+    <string name="view_course_plan">View Course Plan</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="view_class">View Class</string>
+    <string name="blog">Blog</string>
+    <string name="published_blogs">Published Blogs</string>
+
+    <string name="orchids">Orchids</string>
+    <string name="my_branch">My Branch</string>
+    <string name="my_grade">My Grade</string>
+    <string name="my_section">My Section</string>
+
+    <string name="read_more">Read more</string>
+    <string name="please_wait">Please wait</string>
+
+    <string name="menu_student_homework">Student Homework</string>
+    <string name="unopened">Unopened</string>
+    <string name="opened">Opened</string>
+    <string name="submitted">Submitted</string>
+    <string name="evaluated">Evaluated</string>
+    <string name="not_submitted">Not Submitted</string>
+    <string name="no_data">No Data</string>
+    <string name="class_type">Class type</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="view_more">View more</string>
+    <string name="join">Join</string>
+    <string name="rejected">Rejected</string>
+    <string name="periods">Periods</string>
+    <string name="classwork">Details of Classwork</string>
+    <string name="homework">Homework</string>
+    <string name="media">Media</string>
+    <string name="summary">Summary</string>
+    <string name="tools_used">Tools Used</string>
+    <string name="content">Content</string>
+    <string name="insert">Insert</string>
+    <string name="create_new">Create new</string>
+    <string name="genre">Genre</string>
+    <string name="blog_title">Blog title</string>
+    <string name="add_thumbnail">Add thumbnail</string>
+    <string name="submit">Submit</string>
+    <string name="draft">Draft</string>
+    <string name="error_blog_title_empty">Please enter title to the blog</string>
+    <string name="error_create_blog_text">Please write at least 10 words</string>
+    <string name="author">Author</string>
+    <string name="date">Date</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <string name="select_file_from">Select file from</string>
+    <string name="please_upload_thumbnail">Please upload thumbnail</string>
+    <string name="message">Message</string>
+    <string name="created_by">Created by</string>
+    <string name="views">views</string>
+    <string name="likes">likes</string>
+    <string name="upload_question_wise">Upload question wise</string>
+    <string name="add_comments_about_assignment_here">Add comments about assignment here</string>
+    <string name="bulk_upload">Bulk Upload</string>
+    <string name="upload">Upload</string>
+    <string name="attachments">Attachments</string>
+    <string name="submitted_files">Submitted files</string>
+    <string name="save">Save</string>
+    <string name="file">file</string>
+    <string name="subject">Subject</string>
+    <string name="installment_amount">Installment Amount</string>
+    <string name="menu_fee_structure">Fee Structure</string>
+    <string name="menu_manage_payment">Manage Payment</string>
+
+    <string name="menu_teacher_homework">Teacher Homework</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="attach">Attach</string>
+    <string name="question">Question</string>
+    <string name="finish">Finish</string>
+    <string name="add_question">Add question</string>
+    <string name="pen_tool">Pen tool</string>
+    <string name="file_upload">File upload</string>
+    <string name="menu_teacher_view_class">Teacher View Class</string>
+    <string name="menu_resource">Resources</string>
+    <string name="academic_year">Academic year</string>
+
+    <string name="teacher_lesson_plan">Teacher Lesson Plan</string>
+    <string name="teacher_lesson_plan_filter">Teacher Lesson Plan Filter</string>
+
+    <string name="terms_and_conditions"><b>Terms and Conditions</b>\n\n1. Please be informed that additional transaction charges are applicable. For more information please contact your school administrator.\n\n
+2. LetsEduvate will not store any of your Bank credentials / Card details. The system will redirect you to concerned Bank pages only to complete your transaction.\n\n
+3. No refund(s)/ No Cancellations are allowed for the transactions done through this channel.\n\n
+4. In case of any dispute regarding the payments, you are requested to contact school administrator.\n\n
+5. Terms and conditions include Online Payment Fee charges, Refund Policy, Privacy Policy, Withdrawal from School, Governing Law, Jurisdiction etc\n</string>
+    <string name="upload_file">Upload file</string>
+    <string name="teacher_diary">Teacher Diary</string>
+
+    <string name="menu_create_class">Create Class</string>
+
+    <string name="error_mandatory_field">This field should not be empty</string>
+</resources>

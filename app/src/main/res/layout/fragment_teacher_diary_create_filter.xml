@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.newletseduvate.viewmodels.TeacherDiaryCreateFilterViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/button_teacherDiaryCreateFilter_submit"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_teacherDiaryCreateFilter_academicYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                    app:endIconContentDescription="@string/lesson_plan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_teacherDiaryCreateFilter_academicYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="Academic Year"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_teacherDiaryCreateFilter_fromToDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout_teacherDiaryCreateFilter_fromDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textColorHint="@android:color/holo_blue_dark"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:endIconContentDescription="@string/lesson_plan"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_teacherDiaryCreateFilter_fromDate"
+                            bindDate_YYYYDDMM="@{viewModel.fromDate}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:hint="From Date"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout_teacherDiaryCreateFilter_toDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColorHint="@android:color/holo_blue_dark"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:endIconContentDescription="@string/lesson_plan"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_teacherDiaryCreateFilter_toDate"
+                            bindDate_YYYYDDMM="@{viewModel.toDate}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:hint="To Date"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_teacherDiaryCreateFilter_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                    app:endIconContentDescription="@string/lesson_plan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_teacherDiaryCreateFilter_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="Branch"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_teacherDiaryCreateFilter_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                    app:endIconContentDescription="@string/lesson_plan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_teacherDiaryCreateFilter_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="Grade"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_teacherDiaryCreateFilter_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColorHint="@android:color/holo_blue_dark"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                    app:endIconContentDescription="@string/lesson_plan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_teacherDiaryCreateFilter_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="Section"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_teacherDiaryCreateFilter_clearFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout_teacherDiaryCreateFilter_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textColorHint="@android:color/holo_blue_dark"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:endIconContentDescription="@string/lesson_plan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_teacherDiaryCreateFilter_subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:hint="Subject"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout_teacherDiaryCreateFilter_chapter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textColorHint="@android:color/holo_blue_dark"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                        app:endIconContentDescription="@string/lesson_plan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_teacherDiaryCreateFilter_chapter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:hint="Chapter"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_teacherDiaryCreateFilter_submit"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:backgroundTint="@color/app_color"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</layout>

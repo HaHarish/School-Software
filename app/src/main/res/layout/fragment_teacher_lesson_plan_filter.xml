@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.newletseduvate.viewmodels.LessonPlanViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_academicYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:boxBackgroundColor="@android:color/white"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_academicYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="Academic Year"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@android:color/white"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volume"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_branch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@android:color/white"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Branch"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@android:color/white"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Grade"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@android:color/white"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_teacherLessonPlan_chapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@android:color/white"
+            android:textColorHint="@android:color/holo_blue_dark"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+            app:endIconContentDescription="@string/lesson_plan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_teacherLessonPlan_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Chapter"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_teacherCircularFilter_clearFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_teacherLessonPlanFilter_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_teacherLessonPlanFilter_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:backgroundTint="@color/app_color"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

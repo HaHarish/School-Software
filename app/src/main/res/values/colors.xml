@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_bg_color">#FFE8E8</color>
+
+
+    <color name="airpay_color">#0D47A1</color>
+
+    <color name="feed_bg">#d3d6db</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="link">#0a80d1</color>
+    <color name="colorContentBG">#FFFFFF</color>
+
+    <color name="timestamp">#a0a3a7</color>
+
+    <!--<color name="app_color">#5dbcd2</color>-->
+    <color name="app_color">#FF6B6B</color>
+    <color name="colorAccent">#00bfff</color>
+
+    <color name="bottom_sheet_adapter_item_text_colour_selected">@color/app_color</color>
+    <color name="bottom_sheet_adapter_item_text_colour_unselected">@color/black</color>
+
+    <color name="filter_dot_color">#2196F3</color>
+
+    <color name="colorPrimary">@color/purple_500</color>
+    <!--<color name="colorPrimaryDark">@color/purple_700</color>-->
+    <color name="colorPrimaryDark">@color/app_color</color>
+
+    <color name="navigation_drawer_background">#5dbcd2</color>
+
+    <color name="online_class_new_blue_background">#5dbcd2</color>
+    <color name="profiletext">#014B7E</color>
+
+    <color name="heading_text_color">#042955</color>
+
+
+    <color name="blue">#3282DB</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightGrey">#e6e4e5</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="olive">#808000</color>
+    <color name="light_green">#BDB76B</color>
+    <color name="dark_green">#006400</color>
+    <color name="dharkhaki">#34925E</color>
+    <color name="red">#FF0000</color>
+    <color name="status_bg">#999BF3E9</color>
+    <color name="deep_purple">#551033</color>
+    <color name="deep_pink">#FF1493</color>
+    <color name="violet">#EE82EE</color>
+    <color name="teal">#008080</color>
+    <color name="gray">#808080</color>
+    <color name="selected_option_color">#02DFFC</color>
+    <color name="unselected_option_color">#9903DCF8</color>
+    <color name="daily_diary_top">#2E6171</color>
+    <color name="online_class_optional_bg">#CCFFDD</color>
+    <color name="online_class_parent">#EB8F83</color>
+    <color name="app_content_bg">#F2E6FFFF</color>
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="light_gray">#C5BEBE</color>
+    <color name="maincolorradio">#ffe8c9</color>
+    <color name="radiobutton">#d98a4a</color>
+    <color name="biscuit">#fcd373</color>
+    <color name="green">#3ea52b</color>
+    <color name="purple">#8465ac</color>
+    <color name="redtext">#f97b68</color>
+    <color name="online_class_text_color">#042955</color>
+    <color name="pagination_background_color">#79d5e8</color>
+    <color name="english">#F5D8E4</color>
+    <color name="maths">#FFED90</color>
+    <color name="science">#C1E391</color>
+    <color name="other_language">#D4ADD8</color>
+    <color name="others">#C8E7F3</color>
+    <color name="sports">#B1E7D7</color>
+    <color name="performing_arts">#F9E2BF</color>
+    <color name="color_btn_mydiary">#FF80E2FC</color>
+
+    <color name="ebookblue">#79d5e8</color>
+    <color name="subjectcolor">#ffffcc</color>
+    <color name="orchidotop">#FFEFEF</color>
+    <color name="radioback">#FFFDFC</color>
+    <color name="orchidotext">#5e104a</color>
+    <color name="ic_orange">#ecbd00</color>
+    <color name="blurimage">#c1f4ff</color>
+    <!--guest screen-->
+    <color name="color_selector_light_grey">#C3C3C3</color>
+    <color name="color_selector_dark_blue">#042955</color>
+    <color name="color_selector_bg_blue">#2385F9</color>
+    <color name="color_selector_red">#da837b</color>
+    <color name="color_selector_grey">#f3f3f3</color>
+    <color name="view_color_classwork">#40e261</color>
+    <color name="view_color_homework">#ffb048</color>
+    <color name="view_color_media">#64d6f3</color>
+    <color name="color_selector_e_grey">#ECECEC</color>
+    <color name="color_button_text_grey">#BEBEBE</color>
+
+    <!--circular random color-->
+    <color name="color_selector_one">#43C1FE</color>
+    <color name="color_selector_two">#FFA95E</color>
+    <color name="color_selector_three">#9663FF</color>
+    <color name="color_selector_four">#FF6911</color>
+    <color name="color_selector_five">#43C4FE</color>
+    <color name="color_selector_six">#0AE160</color>
+    <color name="notification_card_bg">#F5F5F5</color>
+
+    <color name="filter_color_online_class">#042955</color>
+    <color name="corrected_homework">#B7f5E6</color>
+    <color name="feedback_backgrond">#FFB7E2FF</color>
+    <color name="payment_border_3">#16ac1b</color>
+    <color name="payment_3">#f6fff7</color>
+    <color name="payment_border_2">#fb9206</color>
+    <color name="payment_2">#fff9f1</color>
+    <color name="payment_border">#fbdc06</color>
+    <color name="payment_1">#fffce4</color>
+    <color name="payment_label">#616161</color>
+    <color name="office_executive">#00588B</color>
+    <color name="title_color">#05365D</color>
+    <color name="red_text_color">#AB1F2A</color>
+    <color name="blue_text_color">#4A7EAF</color>
+    <color name="bg_grey_color">#EEEEEE</color>
+    <color name="requested_color">#FFDEDE</color>
+    <color name="accepted_color">#C9FFC5</color>
+    <color name="pdf_color">#C4BCE1</color>
+    <color name="light_grey_color">#ededed</color>
+</resources>

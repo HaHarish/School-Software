@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.newletseduvate.model.blog.StudentBlogModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        style="@style/Common.CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_size_16_dp"
+        android:layout_marginTop="@dimen/dimen_size_16_dp"
+        android:layout_marginEnd="@dimen/dimen_size_16_dp"
+        app:cardCornerRadius="@dimen/dimen_size_5_dp"
+        app:cardElevation="@dimen/dimen_size_2_dp"
+        app:contentPadding="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thumbnail"
+                bindImageViewByUrl="@{model.thumbnail}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_150dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thumbnail">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextStyleContentMediumBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@{model.title}"
+                    android:textSize="@dimen/text_size_16_sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/author_title"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/author"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/t_author_first_name"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{model.author.firstName}"
+                    app:layout_constraintStart_toEndOf="@+id/author_title"
+                    app:layout_constraintTop_toTopOf="@+id/author_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_author_last_name"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{model.author.lastName}"
+                    app:layout_constraintStart_toEndOf="@+id/t_author_first_name"
+                    app:layout_constraintTop_toTopOf="@+id/author_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/genre"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genre"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_author_first_name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_genre"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{model.genre.genre}"
+                    android:textSize="@dimen/text_size_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/genre"
+                    app:layout_constraintTop_toTopOf="@+id/genre" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/date"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_genre" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_date"
+                    style="@style/TextStyleContentMedium"
+                    bindDate_YYYYMMDDTHHMMSS="@{model.createdAt}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="@dimen/text_size_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/date"
+                    app:layout_constraintTop_toTopOf="@+id/date" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/Vb_likeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="@dimen/dimen_8dp"
+                    app:layout_constraintStart_toStartOf="@+id/date"
+                    app:layout_constraintTop_toBottomOf="@+id/date"
+                    app:srcCompat="@drawable/ic_like" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@{String.valueOf(model.likes)}"
+                    app:layout_constraintBottom_toBottomOf="@+id/Vb_likeButton"
+                    app:layout_constraintStart_toEndOf="@+id/Vb_likeButton"
+                    app:layout_constraintTop_toTopOf="@+id/Vb_likeButton" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/view_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:padding="@dimen/dimen_size_4_dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/Vb_likeButton"
+                    app:layout_constraintStart_toEndOf="@+id/tv_likes"
+                    app:layout_constraintTop_toTopOf="@+id/Vb_likeButton"
+                    app:srcCompat="@drawable/ic_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_50p"
+                    android:gravity="center_vertical"
+                    android:text="@{String.valueOf(model.views)}"
+                    android:textSize="@dimen/text_size_14_sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_button"
+                    app:layout_constraintStart_toEndOf="@+id/view_button"
+                    app:layout_constraintTop_toTopOf="@+id/Vb_likeButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

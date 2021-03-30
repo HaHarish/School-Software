@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.newletseduvate.model.general.UploadFileModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layout_file_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_size_160_dp"
+        android:layout_margin="5dp"
+        app:cardElevation="@dimen/dimen_size_2dp"
+        app:cardUseCompatPadding="true">
+
+<!--        android:src="@{model.drawable}"-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_file_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:scaleType="centerCrop"
+            bindImageViewByFile="@{model.file}"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_delete_file"
+            android:layout_width="@dimen/editextheight"
+            android:layout_height="@dimen/editextheight"
+            android:background="#7000"
+            android:backgroundTint="@android:color/white"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_close"
+            tools:ignore="MissingConstraints"
+            tools:targetApi="lollipop" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_file_item"
+            style="@style/TextStyleContentMedium"
+            android:text="@{model.file.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#7000"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:shadowColor="#000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="4"
+            android:textColor="@android:color/white" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

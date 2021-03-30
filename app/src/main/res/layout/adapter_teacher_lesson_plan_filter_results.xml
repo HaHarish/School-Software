@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.newletseduvate.model.lesson_plan.teacher.TeacherLessonPlanFilterResultsResponse.Result" />
+
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Common.CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_teacherLessonPlanAdapter_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.periodName}"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_teacherLessonPlanAdapter_chapterName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.chapterName}"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_ciruclarTeacherAdapter_createdBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Updated On : "
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="normal"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_ciruclarTeacherAdapter_createdByValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{model.updatedAt}"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="normal"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                &lt;!&ndash;<ImageView
+                    android:id="@+id/button_circularTeacherAdapter_viewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_info_24"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"/>&ndash;&gt;
+
+                &lt;!&ndash;<ImageView
+                    android:id="@+id/iv_circularTeacher_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/iv_circularTeacher_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_delete_24"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"/>&ndash;&gt;
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_circularTeacherAdapter_viewMore"
+                    style="@style/Common.NormalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View More"
+                    android:layout_gravity="end"
+                    android:gravity="end"/>
+
+            </LinearLayout>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_teacherLessonPlanAdapter_viewMore"
+                style="@style/Common.NormalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View More"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

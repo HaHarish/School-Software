@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.newletseduvate.model.blog.StudentBlogModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dime_16"
+            android:paddingBottom="@dimen/dimen_16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <ImageButton
+                android:id="@+id/ib_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintEnd_toStartOf="@+id/ib_restore"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/ib_restore"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_restore_24"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView12"
+                style="@style/TextStyleHeadMediumBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{model.title}"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/ib_delete"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                bindImageViewByUrl="@{model.thumbnail}"
+                android:adjustViewBounds="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView12"
+                tools:ignore="ContentDescription" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/oval_shape"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/iv_thumbnail">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView13"
+                    style="@style/TextStyleContentMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{model.author.firstName}"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView14"
+                    style="@style/TextStyleContentMedium"
+                    bindDate_YYYYMMDDTHHMMSS="@{model.createdAt}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <WebView
+                android:id="@+id/option"
+                bindHtmlToWebView="@{model.content}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                tools:ignore="WebViewLayout" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView16"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Genre :"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/option" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView17"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{model.genre.genre}"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView16"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/materialTextView16"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView16" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView18"
+                style="@style/TextStyleContentMediumBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total words :"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView17" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView19"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(model.wordCount)}"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView18"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/materialTextView18"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView18" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView20"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_heart_like"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="@{String.valueOf(model.likes)}"
+                android:textAlignment="center"
+                app:drawableTint="@color/red"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView18" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView23"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/likes"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView20"
+                app:layout_constraintStart_toEndOf="@+id/materialTextView20"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView20"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView21"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@drawable/ic_view"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="@{String.valueOf(model.views)}"
+                android:textAlignment="center"
+                app:drawableTint="@color/red"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView20"
+                app:layout_constraintStart_toEndOf="@+id/materialTextView23"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView20" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView22"
+                style="@style/TextStyleContentMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/views"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView21"
+                app:layout_constraintStart_toEndOf="@+id/materialTextView21"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView21" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

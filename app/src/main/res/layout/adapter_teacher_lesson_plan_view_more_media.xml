@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.newletseduvate.model.lesson_plan.teacher.TeacherLessonPlanViewMoreModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tv_file"
+            style="@style/TextStyleContentMedium"
+            android:text="@{model.type}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            bindIconForFileTypeCircular="@{model.mediaUrl}"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_file"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_file_type"
+            style="@style/TextStyleContentMedium"
+            bindVisibilityBasedOnMediaType="@{model.mediaUrl}"
+            bindingMediaTypeText="@{model.mediaUrl}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/tv_attachments"
+            style="@style/TextStyleContentMedium"
+            bindVisibilityBasedOnMediaType="@{model.mediaUrl}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/file"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_file_type"
+            app:layout_constraintStart_toEndOf="@+id/tv_file_type"
+            app:layout_constraintTop_toTopOf="@+id/tv_file_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

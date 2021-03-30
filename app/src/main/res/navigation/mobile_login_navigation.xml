@@ -1,0 +1,27 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_login">
+
+    <activity
+        android:id="@+id/nav_main_activity"
+        android:name="com.newletseduvate.ui.activities.MainActivity"
+        tools:layout="@layout/activity_main" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.newletseduvate.ui.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/nav_forgot_password"
+        android:name="com.newletseduvate.ui.forgotPassword.ForgotPasswordFragment"
+        android:label="@string/view_course_plan"
+        tools:layout="@layout/fragment_forgot_password" />
+
+    <activity
+        android:id="@+id/nav_login_activity"
+        android:name="com.newletseduvate.ui.login.LoginActivity"
+        tools:layout="@layout/activity_login" />
+
+</navigation>
